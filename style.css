@@ -47,6 +47,11 @@ img {
 
 .instructions > h1 {
 	font-size: 26px;
+	font-weight: 400;
+}
+
+.instructions-content {
+	padding-left: 20px;
 }
 
 .instructions-nav {
