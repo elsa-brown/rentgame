@@ -1,37 +1,102 @@
-body {
-	font-family: "Times New Roman", Times, serif;
-}
-
-.row {
-	display: block;
-	overflow: hidden;
-}
-.content {
-	float: left;
+* {
 	box-sizing: border-box;
-	width: 33.3333333333333%;
-	padding: 20px;
-	text-align: center;
-}
-img {
-	max-width: 95%;
-}
-h1 {
-	text-align: center;
-}
-.intro {
-	font-size: 14px;
-	text-align: center;
-	margin-top: -15px;
-}
-.about {
-	font-size: 18px;
-	text-align: center;
-	max-width: 500px;
-	min-width: 180px;
-	margin: 0 auto;
 }
 
-.tiny {
-	font-size: 10px;
+html {
+	background: #eee;
+}
+
+body {
+	background: #fff;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 auto;
+	min-height: 100vh;
+	max-width: 1200px;
+	padding: 20px;
+}
+
+img {
+	border-radius: 2px;
+	width: 100%;
+	max-width: 600px;
+	max-height: 440px;
+}
+
+.home-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 20px;
+	row-gap: 20px;
+}
+
+.home-title {
+	text-decoration: none;
+}
+
+.home-title:hover {
+	text-decoration: underline;
+}
+
+.home-title > h1 {
+	font-weight: 400;
+}
+
+.instructions > h1 {
+	font-size: 26px;
+	font-weight: 400;
+}
+
+.instructions-content {
+	padding-left: 20px;
+}
+
+.instructions-nav {
+	font-size: 14px;
+	letter-spacing: 0.0125rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.page {
+	text-align: left;
+}
+
+.page > h1 {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.page-frame {
+	background: #eeeeee;
+	border: solid 1px #ccc;
+	display: flex;
+	width: fit-content;
+	border-radius: 2px;
+}
+
+@media screen and (max-width: 900px) {
+	.home-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+	.home-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	body {
+		border-right: solid 1px #ccc;
+		border-left: solid 1px #ccc;
+		padding: 20px 60px;
+	}
 }
